@@ -1,0 +1,74 @@
+generated: '2026-09-19'
+method: searched
+source: https://airsmed.com/faq/
+description: >-
+  Standards AIRS Medical states its products and operations conform to, harvested from the
+  company's own public pages. There is no OpenAPI or other machine-readable contract to derive from,
+  so every entry is a published prose claim with the page that makes it; nothing here is asserted
+  from a spec. The one domain standard in play is DICOM: SwiftMR and SwiftSight-Hub speak the DICOM
+  image-transmission protocol to the scanner and PACS (SwiftSight-Hub 1.0.2.0 added PACS
+  Query/Retrieve). That is the healthcare-imaging interoperability standard, but it is a local
+  network protocol the product implements, not a published web-API contract, so it is recorded as a
+  conformance claim and not as a contract.
+standards:
+  - id: dicom
+    conforms: true
+    evidence: >-
+      FAQ: "The integration that enables image transfer between the equipment and SwiftMR adheres
+      strictly to the existing DICOM image transmission protocol. From the MRI equipment's point of
+      view, SwiftMR looks like a PACS server." Release note SS26-HUB 1.0.2.0: "Hub handles DICOM
+      reception from MRI/PACS" and "PACS Query/Retrieve (PACS-QR)".
+    urls: [https://airsmed.com/faq/, https://airsmed.com/releasenotes/swiftsight-hub-1-0-2-0/]
+    domain_standard: true
+  - id: hipaa
+    conforms: true
+    evidence: >-
+      FAQ: patient fields are removed on the gateway PC "following the Safe Harbor Method as defined
+      in HIPAA before transmitting the image data to the cloud server"; HIPAA attestation stated
+      alongside GDPR and SOC 2 Type II. Privacy Policy Annex B.5 is titled "HIPAA Compliance".
+    urls: [https://airsmed.com/faq/, https://airsmed.com/privacy-policy/]
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      Privacy Policy (v2.1, effective September 14, 2026) Annex A covers the EEA/UK with Article 28
+      processor terms, Article 35 DPIAs and a 72-hour supervisory-authority breach notification;
+      AIRS Medical Europe GmbH (Munich) is the EU controller and Youtilix Ltd the UK representative.
+    urls: [https://airsmed.com/privacy-policy/]
+  - id: soc2-type2
+    conforms: true
+    evidence: 'FAQ and SwiftSight security summary state SOC 2 Type II attestation; no report is public.'
+    urls: [https://airsmed.com/faq/, https://airsmed.com/swiftsight-information-security-white-paper/]
+  - id: iso-27001
+    conforms: true
+    evidence: 'FAQ: headquarters handles personal information, image data and cloud database management "in accordance with ISO/IEC 27001:2022".'
+    urls: [https://airsmed.com/faq/]
+  - id: iso-42001
+    conforms: true
+    evidence: 'SwiftMR Information Security Whitepaper landing page lists "AI governance under ISO/IEC 42001" among the topics the whitepaper covers; the whitepaper itself is behind a download form.'
+    urls: [https://airsmed.com/resources/swiftmr-information-security-whitepaper/]
+    confidence: medium
+  - id: wcag-2.1-aa
+    conforms: partial
+    evidence: 'Accessibility Statement (June 24, 2026): client portal and user manual "partially conformant with WCAG 2.1 Level AA", independently reviewed.'
+    urls: [https://airsmed.com/accessibility-statement/]
+  - id: fda-510k
+    conforms: true
+    evidence: 'SwiftMR is FDA 510(k)-cleared for all body parts and sequences (about page, FAQ, news).'
+    urls: [https://airsmed.com/about-us/]
+  - id: eu-mdr-ce
+    conforms: true
+    evidence: 'CE Marking under EU MDR, Jan 2024 (about page).'
+    urls: [https://airsmed.com/about-us/]
+  - id: mdsap
+    conforms: true
+    evidence: 'MDSAP certified for US, Canada, Australia, Brazil and Japan, Aug 2023 (about page).'
+    urls: [https://airsmed.com/about-us/]
+  - id: oauth2
+    conforms: false
+    evidence: 'No API; no OAuth surface. /.well-known/oauth-authorization-server and /openid-configuration 404.'
+  - id: fhir-r4
+    conforms: false
+    evidence: 'No FHIR endpoint or claim anywhere on the site; the imaging interface is DICOM, not FHIR.'
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: 'No HTTP API to carry problem details.'

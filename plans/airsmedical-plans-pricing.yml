@@ -1,0 +1,36 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: AIRS Medical
+providerId: airsmedical
+generated: '2026-09-19'
+method: searched
+source: https://airsmed.com/faq/
+created: '2026-09-19'
+modified: '2026-09-19'
+plan_count: 0
+description: >-
+  AIRS Medical publishes no pricing and no plan tiers. There is no /pricing page (the site has
+  no such URL in its sitemap), and every product path ends in "Book a demo", "Talk to an expert"
+  or a free-trial form. SwiftMR and SwiftSight are regulated medical-device software sold to
+  hospitals and imaging centers under enterprise agreements; the site offers an ROI calculator
+  (/swiftmr/roi/) in place of a price list. The only published commercial term is the trial: the
+  FAQ states a one-month free trial of SwiftMR and that demo licenses are never extended beyond
+  one month as a matter of policy. There is no API to price.
+plans: []
+commercial_terms:
+  free_trial:
+    period: one month
+    quote: 'Yes, we provide a one-month free trial of SwiftMR ... as a policy, we do not offer demo licenses for more than one month.'
+    url: https://airsmed.com/faq/
+  sales_motion: contact sales / book a demo
+  urls:
+    - https://airsmed.com/book-demo/
+    - https://airsmed.com/freetrial/
+    - https://airsmed.com/swiftmr/roi/
+x-evidence:
+  fetched: '2026-09-19'
+  probes:
+    - {url: https://airsmed.com/faq/, status: 200}
+    - {url: https://airsmed.com/swiftmr/, status: 200, note: 'no price; CTAs are Book demo / How it works'}
+    - {url: https://airsmed.com/page-sitemap.xml, status: 200, note: 'no /pricing URL in the sitemap'}

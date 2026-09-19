@@ -1,7 +1,14 @@
 aid: airsmedical
-name: Airsmedical
-description: 'Airsmedical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AIRS Medical
+description: >-
+  AIRS Medical (AI Radiology Solutions) is a Seoul-founded medical-AI company whose SwiftMR
+  deep-learning MRI reconstruction software cuts scan times by up to 50% on existing scanners,
+  and whose SwiftSight products deliver quantitative brain, DTI and body-composition reporting.
+  SwiftMR is FDA 510(k)-cleared, CE-marked under EU MDR, PMDA-approved and MDSAP-certified, and
+  is deployed at 1,700+ institutions in 40+ countries. The products integrate with hospital
+  MRI scanners and PACS over the DICOM protocol (SwiftMR presents itself to the scanner as a
+  PACS node); the company publishes no public developer program, API, SDK or webhooks.
+image: https://airsmed.com/wp-content/uploads/2023/05/AIRS-Medical_Logo_RGB_Symbol.png
 url: https://raw.githubusercontent.com/api-evangelist/airsmedical/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +19,13 @@ created: '2026-09-19'
 modified: '2026-09-19'
 tags:
 - Company
+- Healthcare
+- Medical Imaging
+- MRI
+- Radiology
+- Artificial Intelligence
+- Medical Devices
+- DICOM
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +34,93 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/airsmedical
+  url: https://airsmed.com
+- type: About
+  url: https://airsmed.com/about-us/
+- type: Blog
+  url: https://airsmed.com/blog/
+- type: Newsroom
+  url: https://airsmed.com/news/
+- type: Leadership
+  url: https://airsmed.com/leadership/
+- type: Support
+  url: https://airsmed.com/support/
+- type: HelpCenter
+  name: FAQ
+  url: https://airsmed.com/faq/
+- type: Careers
+  url: https://airsmed.com/careers/
+- type: ChangeLog
+  name: SwiftMR release notes (dated, per product line)
+  url: https://airsmed.com/releasenote/swiftmr/
+- type: ChangeLog
+  name: Structured release-notes capture
+  url: changelog/airsmedical-changelog.yml
+- type: Compliance
+  name: Compliance and Policies hub (privacy, legal, security, accessibility, AI transparency)
+  url: https://airsmed.com/compliance/
+- type: TrustCenter
+  url: security/airsmedical-trust-center.yml
+- type: Conformance
+  url: conformance/airsmedical-conformance.yml
+- type: PrivacyPolicy
+  url: https://airsmed.com/privacy-policy/
+- type: TermsOfService
+  url: https://airsmed.com/terms-and-conditions/
+- type: GitHubOrganization
+  url: https://github.com/airsmedical
+- type: LinkedIn
+  url: https://www.linkedin.com/company/airsmed/
+- type: YouTube
+  url: https://www.youtube.com/@airsmedical
+- type: LLMsTxt
+  name: llms.txt served by airsmed.com (Yoast-generated), saved verbatim
+  url: llms/airsmedical-llms.txt
+- type: AccessibilityConformance
+  name: Accessibility Statement — partially conformant with WCAG 2.1 Level AA, externally reviewed (June 24, 2026)
+  url: https://airsmed.com/accessibility-statement/
+- type: AITransparency
+  name: AI Transparency Statement (published June 9, 2026)
+  url: https://airsmed.com/ai-transparency-statement/
+- type: GlobalPrivacyControl
+  name: Privacy Policy states GPC opt-out preference signals are recognized and honored
+  url: https://airsmed.com/privacy-policy/
+- type: DataSubjectRequest
+  name: Privacy Rights and Inquiries request form
+  url: https://airsmed.com/privacy-rights-inquiries/
+- type: IncidentNotification
+  name: Breach notification commitment (Privacy Policy 7.1 and Annex A.5) — harvest record in regulatory/airsmedical-regulatory-posture.yml
+  url: https://airsmed.com/privacy-policy/
+- type: RegulatoryPosture
+  url: regulatory/airsmedical-regulatory-posture.yml
+- type: Plans
+  url: plans/airsmedical-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/airsmedical-rate-limits.yml
+- type: DomainSecurity
+  url: security/airsmedical-domain-security.yml
+x-enrichment:
+  date: '2026-09-19'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AIRS Medical ships regulated medical-device software (SwiftMR, SwiftSight) that talks DICOM to
+    the scanner and PACS on the hospital network; airsmed.com has no developer, API or docs path
+    (all 404), no OpenAPI/GraphQL/MCP/agent-card at any discovery location, and its GitHub org holds
+    an ITK-SNAP fork and a DLP plugin rather than an SDK.
+  evidence:
+    - url: https://airsmed.com/developers
+      status: 404
+    - url: https://airsmed.com/openapi.json
+      status: 404
+    - url: https://airsmed.com/.well-known/agent-card.json
+      status: 404
+    - url: https://airsmed.com/faq/
+      status: 200
+    - url: https://api.github.com/orgs/airsmedical
+      status: 200
+  checked: '2026-09-19'

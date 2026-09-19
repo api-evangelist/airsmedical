@@ -1,0 +1,20 @@
+generated: '2026-09-19'
+method: searched
+source: https://airsmed.com/
+limit_count: 0
+description: >-
+  AIRS Medical publishes no API and therefore no rate limits. This is an honest zero: there is no
+  developer documentation in which a limit could be published, no API host to observe headers on,
+  and the products' only external interface is DICOM image transfer on the hospital network
+  (FAQ). The WordPress site's own /wp-json/ endpoint is a CMS surface, not a product API, and is
+  deliberately not measured here.
+limits: []
+response_headers:
+  observed: []
+  checked_for: []
+  note: 'No API host exists to probe.'
+exhaustion_status: null
+evidence:
+  - {url: https://airsmed.com/developers, status: 404}
+  - {url: https://airsmed.com/api, status: 404}
+  - {url: https://airsmed.com/faq/, status: 200, note: 'integration described as DICOM only; no API, SDK or rate limit mentioned'}

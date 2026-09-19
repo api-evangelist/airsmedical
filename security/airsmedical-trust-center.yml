@@ -1,0 +1,40 @@
+generated: '2026-09-19'
+method: searched
+probe: true
+source: https://airsmed.com/compliance/
+url: https://airsmed.com/compliance/
+description: >-
+  AIRS Medical has no trust.<domain> portal (the automated trust-center probe recorded none); its
+  compliance posture is published as a "Compliance and Policies" hub at /compliance/ that links the
+  regional privacy policies, terms, accessibility statement, AI transparency statement and two
+  product information-security summaries (SwiftMR and SwiftSight). The named certifications and
+  attestations below are quoted from the FAQ and the whitepaper landing pages; the full security
+  whitepapers themselves are gated behind a download form and were not read.
+certifications:
+  - {name: ISO/IEC 27001:2022, scope: 'Personal information, image data and cloud database management at AIRS Medical headquarters', evidence: https://airsmed.com/faq/}
+  - {name: SOC 2 Type II, availability: attestation stated; report not public, evidence: https://airsmed.com/faq/}
+  - {name: HIPAA, note: 'Safe Harbor de-identification of DICOM tags on the on-premises gateway before cloud transmission', evidence: https://airsmed.com/faq/}
+  - {name: GDPR, evidence: https://airsmed.com/faq/}
+  - {name: ISO/IEC 42001, scope: AI governance (SwiftMR whitepaper), evidence: https://airsmed.com/resources/swiftmr-information-security-whitepaper/}
+  - {name: FDA 510(k), scope: 'SwiftMR — all body parts and sequences; scan-time reduction up to 50%', evidence: https://airsmed.com/about-us/}
+  - {name: CE Marking (EU MDR), date: 'Jan 2024', evidence: https://airsmed.com/about-us/}
+  - {name: PMDA approval (Japan), date: 'Oct 2023', evidence: https://airsmed.com/about-us/}
+  - {name: MDSAP, scope: 'US, Canada, Australia, Brazil and Japan', date: 'Aug 2023', evidence: https://airsmed.com/about-us/}
+security_controls_stated:
+  - 'AES-256 encryption at rest and TLS 1.3 in transit (SwiftMR whitepaper page)'
+  - 'Identity and access management, MFA, and enterprise SSO'
+  - 'Penetration testing and vulnerability management; 24/7 security monitoring and incident response'
+  - 'Cloud service designed not to store, transmit, or display PHI/PII; re-identification mapping stays on-premises'
+  - 'Cloud hosted on AWS; anonymized images deleted from the cloud server within 24 hours after processing (FAQ)'
+docs:
+  - https://airsmed.com/compliance/
+  - https://airsmed.com/faq/
+  - https://airsmed.com/resources/swiftmr-information-security-whitepaper/
+  - https://airsmed.com/swiftsight-information-security-white-paper/
+evidence:
+  - {source: https://airsmed.com/faq/, quote: 'we handle personal information, image data, and cloud database management in accordance with ISO/IEC 27001:2022 information security standards and patient data protection standards, alongside GDPR, HIPAA, and SOC 2 Type II attestations', status: 200}
+  - {source: https://airsmed.com/resources/swiftmr-information-security-whitepaper/, keywords: [aes-256, tls 1.3, mfa, sso, penetration testing, 'iso/iec 42001', certifications and attestations], status: 200}
+  - {source: https://airsmed.com/swiftsight-information-security-white-paper/, keywords: [hipaa, gdpr, soc2 type ii, aws], status: 200}
+  - {source: https://airsmed.com/about-us/, keywords: ['fda cleared 510(k)', 'ce marking eu mdr', pmda, mdsap], status: 200}
+gaps:
+  - 'No public SOC 2 / ISO certificate documents; no trust portal; no security.txt (/.well-known/security.txt 404); no published vulnerability-disclosure policy or bug bounty.'

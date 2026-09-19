@@ -1,0 +1,50 @@
+generated: '2026-09-19'
+method: probed
+description: >-
+  Results of probing the /.well-known/ discovery surface on the only first-party host the record
+  knows, airsmed.com (www.airsmed.com 301s to it; airsmedical.com is a parked lander that
+  redirects to /lander and is not the company's site). AIRS Medical publishes no API, so there is
+  no API base host, no OpenAPI servers[] host and no MCP host to probe. Every path 404d with the
+  WordPress theme's HTML 404 page; none is a document, so nothing was saved and NO WellKnown or
+  SecurityTxt pointer is emitted in apis.yml. The one discovery file the host does serve is
+  /llms.txt (200, text/plain, Yoast-generated), saved verbatim to llms/airsmedical-llms.txt.
+hosts:
+- host: https://airsmed.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+contract_discovery:
+  note: >-
+    STEP 0b hunt for a machine-readable contract on airsmed.com. Every candidate returned the
+    HTML 404 page. No GraphQL, MCP, OGC or SOAP surface is named anywhere on the site; the only
+    integration the company documents is DICOM image transfer between the MRI scanner, the
+    SwiftMR/SwiftSight gateway and the hospital PACS (FAQ), which is a local network protocol,
+    not a web API.
+  probes:
+  - {path: /openapi.json, status: 404}
+  - {path: /openapi.yaml, status: 404}
+  - {path: /swagger.json, status: 404}
+  - {path: /api-docs, status: 404}
+  - {path: /api, status: 404}
+  - {path: /api/v1/openapi.json, status: 404}
+  - {path: /docs, status: 404}
+  - {path: /developers, status: 404}
+  - {path: /developer, status: 404}
+  - {path: /llms.txt, status: 200, type: text/plain, file: ../llms/airsmedical-llms.txt}
+  - {path: /robots.txt, status: 200, type: text/plain, note: 'Allows all agents including GPTBot/OAI-SearchBot; disallows PDF/JSON uploads and the eIFU manual paths'}

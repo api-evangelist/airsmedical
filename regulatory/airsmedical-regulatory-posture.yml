@@ -1,0 +1,62 @@
+generated: '2026-09-19'
+method: searched
+probe: true
+source: https://airsmed.com/compliance/
+note: >-
+  Harvest only; nothing here decides which regime applies. AIRS Medical is unusually well
+  documented for a company with no API: the /compliance/ hub links a dated Accessibility
+  Statement with a named WCAG conformance level, a dated AI Transparency Statement, a Privacy
+  Rights and Inquiries request form, and a versioned Privacy Policy (v2.1, effective September
+  14, 2026) that states GPC signals are honored and gives breach-notification commitments.
+  Signals NOT found and therefore omitted: SBOM (none published; robots.txt even disallows
+  /wp-content/uploads/*.json), support lifetime (release notes carry no stated support period),
+  training-data summary (the AI statement only says customer/patient data is not used for
+  training without authorization — a policy, not a summary of the training corpus), a dated
+  subprocessor table (the privacy policy names recipient categories and Workable by name, not a
+  table), data residency (the policy says AWS data is "generally processed and stored in the
+  region where the service is delivered", with no selectable regions), age assurance, notice and
+  action, transparency report, exit assistance.
+signals:
+  accessibility_conformance:
+    url: https://airsmed.com/accessibility-statement/
+    standard: [WCAG 2.1 AA]
+    status: partially conformant
+    scope: 'Client portal and user manual of SwiftMR and SwiftSight (cloud-network products)'
+    assessment: 'External evaluation and review'
+    dated: '2026-06-24'
+    evidence: [{source: https://airsmed.com/accessibility-statement/, status: 200, quote: 'Partially Conformant with WCAG 2.1 Level AA ... Accessibility for our client portal and user manual has been independently reviewed to the WCAG 2.1 Level AA standards.'}]
+  ai_transparency:
+    url: https://airsmed.com/ai-transparency-statement/
+    dated: '2026-06-09'
+    evidence: [{source: https://airsmed.com/ai-transparency-statement/, status: 200, quote: 'Where our products generate or modify content (for example, enhanced or reconstructed images and AI-generated reports), AIRS Medical implements measures, where applicable, so that such outputs are identifiable as AI-generated or AI-modified, consistent with applicable transparency requirements'}]
+    note: 'Privacy Policy Annex A.6 additionally addresses the EU AI Act and GDPR Art. 22 (no solely automated decision-making; DPIAs under Art. 35).'
+  global_privacy_control:
+    honored: true
+    url: https://airsmed.com/privacy-policy/
+    evidence: [{source: https://airsmed.com/privacy-policy/, status: 200, quote: 'We recognize and honor opt-out preference signals, such as the Global Privacy Control (GPC), as valid requests to opt out of the sale and sharing of your personal information and targeted advertising. When we detect a GPC signal from your browser, we will treat it as a valid opt-out request'}]
+    note: 'Set from the published statement only; no Sec-GPC header was sent.'
+  data_subject_request:
+    url: https://airsmed.com/privacy-rights-inquiries/
+    channel: web form (plus privacy@airsmed.com in the Privacy Policy)
+    stated_response_time: 'within one month of receipt'
+    evidence:
+      - {source: https://airsmed.com/privacy-rights-inquiries/, status: 200, quote: 'This form is dedicated exclusively to privacy-related inquiries ... You may also designate an authorized agent to submit a request on your behalf.'}
+      - {source: https://airsmed.com/privacy-policy/, status: 200, quote: 'we respond to and resolve all Subject Access Requests we receive from you regarding your personal data within one month of receipt'}
+  incident_notification:
+    url: https://airsmed.com/privacy-policy/
+    stated_sla: 'without undue delay'
+    audience: 'data controllers (customers) where AIRS Medical acts as processor'
+    regulator_sla: 'without undue delay and, where feasible, no later than 72 hours after becoming aware of the breach'
+    evidence:
+      - {source: https://airsmed.com/privacy-policy/, status: 200, quote: 'Where we act as a data processor, we will notify the data controller without undue delay upon becoming aware of a breach.'}
+      - {source: https://airsmed.com/privacy-policy/, status: 200, quote: 'In the event of a personal data breach, we will notify the competent supervisory authority without undue delay and, where feasible, no later than 72 hours after becoming aware of the breach'}
+    note: 'Both strings are verbatim. The 72-hour figure is the GDPR Art. 33 supervisory-authority window, not a customer SLA; the customer-facing commitment is "without undue delay".'
+probed:
+  - {url: https://airsmed.com/compliance/, status: 200}
+  - {url: https://airsmed.com/accessibility-statement/, status: 200}
+  - {url: https://airsmed.com/ai-transparency-statement/, status: 200}
+  - {url: https://airsmed.com/privacy-rights-inquiries/, status: 200}
+  - {url: https://airsmed.com/privacy-policy/, status: 200}
+  - {url: https://airsmed.com/terms-and-conditions/, status: 200}
+  - {url: https://airsmed.com/resources/swiftmr-information-security-whitepaper/, status: 200, note: 'whitepaper gated behind a download form'}
+  - {url: https://airsmed.com/.well-known/security.txt, status: 404}

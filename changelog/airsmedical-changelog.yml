@@ -1,0 +1,99 @@
+generated: '2026-09-19'
+method: searched
+source: https://airsmed.com/releasenote/swiftmr/
+description: >-
+  Structured capture of AIRS Medical's dated release notes. IMPORTANT SCOPE NOTE: these are
+  release notes for regulated medical-device SOFTWARE (SwiftMR Cloud A20-CL, SwiftMR On-Premise
+  A22-OP, SwiftSight Brain SS25-BR-CL, SwiftSight-Hub SS26-HUB), not for an API — AIRS Medical
+  publishes no API. They are recorded because the company does publish a dated, versioned,
+  per-product changelog with "What's New / Improvements / Bug Fixes" sections, in English and
+  Korean, filterable by product line and version, and that is the operational-transparency fact
+  this artifact measures. Only the recent window is captured; the live pages are the source of truth.
+docs:
+  - https://airsmed.com/releasenote/swiftmr/
+  - https://airsmed.com/releasenote/swiftsight/
+versioning:
+  scheme: 'four-part semantic-style version per product line (e.g. v3.1.2.0), prefixed by a product code (A20-CL cloud, A22-OP on-premise, SS25-BR-CL, SS26-HUB); vendor-specific builds carry a suffix (v3.1.0.1-esaote)'
+  product_lines:
+    - {code: A20-CL, product: SwiftMR Cloud, current: v3.1.2.0}
+    - {code: A22-OP, product: SwiftMR On-Premise, current: v3.1.0.1-esaote}
+    - {code: SS25-BR-CL, product: SwiftSight Brain (cloud), current: v1.0.4.0}
+    - {code: SS26-HUB, product: 'SwiftSight-Hub (DICOM gateway; independently versioned since 1.0.2.0)', current: '1.0.2.0'}
+  api_version_header: null
+entries:
+  - version: A22-OP v3.1.0.1-esaote
+    date: '2026-09-11'
+    url: https://airsmed.com/releasenotes/a22-op-v3-1-0-1-esaote/
+    breaking: []
+    highlights:
+      - Aligns Scan Item wildcard matching with SwiftMR Cloud (most specific Scan Item now always selected)
+      - Updated on-premise support for Esaote MRI systems
+      - Vendor-specific DICOM tags preserved through reconstruction for Canon and Toshiba consoles
+      - Fixed processing failure on MIP series of three or fewer images
+  - version: A22-OP v3.0.11.5
+    date: '2026-09-11'
+    url: https://airsmed.com/releasenotes/a22-op-v3-0-11-5/
+    breaking: []
+    highlights:
+      - Scan Item matching aligned with SwiftMR Cloud; vendor DICOM compatibility and post-processing fixes
+  - version: SS26-HUB 1.0.2.0
+    date: '2026-08-18'
+    url: https://airsmed.com/releasenotes/swiftsight-hub-1-0-2-0/
+    breaking: []
+    highlights:
+      - SwiftSight-Hub becomes an independently versioned, separately regulated platform component (SS26-HUB)
+      - Added PACS Query/Retrieve (PACS-QR) with automatic fallback to single-study analysis
+      - Added Custom Longitudinal Analysis (manual prior-study selection, cloud-only)
+      - Multi-model labelling on the Info tab
+  - version: A20-CL v3.1.2.0
+    date: '2026-08-06'
+    url: https://airsmed.com/releasenotes/a20-cl-v3-1-2-0/
+    breaking: []
+    highlights:
+      - Improved Head Auto Cutting (RadialMIP) accuracy on wide-FOV acquisitions (post-processing only; AI model unchanged)
+      - Fixed Store Original off still sending to the disabled destination on legacy DCS v3.0.12.0-3.0.13.x
+      - Fixed Service Setup migration error when upgrading from legacy versions
+  - version: A20-CL v3.1.1.1
+    date: '2026-06-25'
+    url: https://airsmed.com/releasenotes/a20-cl-v3-1-1-1/
+    highlights: [Stability, reliability and consistency improvements; Auto Cutting multi-axis reliability]
+  - version: SS25-BR-CL v1.0.4.0
+    date: '2026-06-23'
+    url: https://airsmed.com/releasenotes/ss25-br-cl-v1-0-4-0/
+    highlights: [Longitudinal analysis workflow updates]
+  - version: SS25-BR-CL v1.0.3.0
+    date: '2026-05-15'
+    url: https://airsmed.com/releasenotes/ss25-br-cl-v1-0-3-0/
+    highlights: [Workflow group and priority-based workflow management]
+  - version: A20-CL v3.1.1.0
+    date: '2026-05-12'
+    url: https://airsmed.com/releasenotes/a20-cl-v3-1-1-0/
+  - version: SS25-BR-CL v1.0.2.1
+    date: '2026-04-08'
+    url: https://airsmed.com/releasenotes/ss25-br-cl-v1-0-2-1/
+    highlights: [Improved DICOM metadata preservation]
+  - version: SS25-BR-CL v1.0.2.0
+    date: '2026-03-16'
+    url: https://airsmed.com/releasenotes/ss25-br-cl-v1-0-2-0/
+    highlights: [License-based count]
+  - version: A20-CL v3.0.13.3
+    date: '2026-03-04'
+    url: https://airsmed.com/releasenotes/a20-cl-v3-0-13-3/
+  - version: SS25-BR-CL v1.0.1.0
+    date: '2026-02-02'
+    url: https://airsmed.com/releasenotes/swiftsight-brain-ss25-br-cl-v1-0-1-0/
+  - version: A20-CL v3.0.13.2
+    date: '2025-12-17'
+    url: https://airsmed.com/releasenotes/a20-cl-v3-0-13-2/
+  - version: A20-CL v3.0.13.1
+    date: '2025-08-07'
+    url: https://airsmed.com/releasenotes/a20-cl-v3-0-13-1/
+  - version: A20-CL v3.0.13.0
+    date: '2025-07-08'
+    url: https://airsmed.com/releasenotes/swiftmr-a20-cl-v3-0-13-0/
+x-evidence:
+  fetched: '2026-09-19'
+  probes:
+    - {url: https://airsmed.com/releasenote/swiftmr/, status: 200}
+    - {url: https://airsmed.com/releasenote/swiftsight/, status: 200}
+    - {url: https://airsmed.com/releasenotes-sitemap.xml, status: 200, note: '15 release-note URLs with lastmod'}

@@ -1,4 +1,4 @@
-# Airsmedical
+# AIRS Medical
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Airsmedical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/airsmedical
+AIRS Medical (AI Radiology Solutions) is a Seoul-founded medical-AI company whose SwiftMR deep-learning MRI reconstruction software cuts scan times by up to 50% on existing scanners, and whose SwiftSight products deliver quantitative brain, DTI and body-composition reporting. SwiftMR is FDA 510(k)-cleared, CE-marked under EU MDR, PMDA-approved and MDSAP-certified, and is deployed at 1,700+ institutions in 40+ countries.
+
+**API surface: none.** The products integrate with hospital MRI scanners and PACS over the DICOM protocol (SwiftMR presents itself to the scanner as a PACS node). The company publishes no developer program, API, SDK or webhooks; what it does publish — dated per-product release notes, a compliance hub with an accessibility statement, an AI transparency statement, a privacy-rights request form and a GPC-honoring privacy policy, plus an `llms.txt` — is captured in this repository.
+
+- Website: https://airsmed.com
+- Release notes: https://airsmed.com/releasenote/swiftmr/
+- Compliance and policies: https://airsmed.com/compliance/
