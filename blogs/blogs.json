@@ -1,0 +1,14 @@
+{
+  "repo": "airsmedical",
+  "feeds": [
+    {
+      "source": "https://airsmed.com/about-us/",
+      "feed_url": "https://airsmed.com/feed/",
+      "title": "",
+      "saved": 3,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 3,
+  "fetched": "2026-09-19T20:17:39Z"
+}
