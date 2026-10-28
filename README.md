@@ -64,10 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AIRS Medical (AI Radiology Solutions) is a Seoul-founded medical-AI company whose SwiftMR deep-learning MRI reconstruction software cuts scan times by up to 50% on existing scanners, and whose SwiftSight products deliver quantitative brain, DTI and body-composition reporting. SwiftMR is FDA 510(k)-cleared, CE-marked under EU MDR, PMDA-approved and MDSAP-certified, and is deployed at 1,700+ institutions in 40+ countries.
+AIRS Medical (AI Radiology Solutions) is a Seoul-founded medical-AI company whose SwiftMR deep-learning MRI reconstruction software cuts scan times by up to 50% on existing scanners, and whose SwiftSight products deliver quantitative brain, DTI and body-composition reporting. SwiftMR is FDA 510(k)-cleared, CE-marked under EU MDR, PMDA-approved and MDSAP-certified, and is deployed at 1,700+ institutions in 40+ countries. The products integrate with hospital MRI scanners and PACS over the DICOM protocol (SwiftMR presents itself to the scanner as a PACS node); the company publishes no public developer program, API, SDK or webhooks.
 
-**API surface: none.** The products integrate with hospital MRI scanners and PACS over the DICOM protocol (SwiftMR presents itself to the scanner as a PACS node). The company publishes no developer program, API, SDK or webhooks; what it does publish — dated per-product release notes, a compliance hub with an accessibility statement, an AI transparency statement, a privacy-rights request form and a GPC-honoring privacy policy, plus an `llms.txt` — is captured in this repository.
+**Areas:** Company · Healthcare · Medical Imaging · MRI · Radiology · Artificial Intelligence · Medical Devices · DICOM
 
-- Website: https://airsmed.com
-- Release notes: https://airsmed.com/releasenote/swiftmr/
-- Compliance and policies: https://airsmed.com/compliance/
+## AIRS Medical on APIs.io
+
+Everything profiled for AIRS Medical is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/airsmedical/](https://apis.io/providers/airsmedical/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Airsmedical Domain Security](https://apis.io/security/airsmedical/airsmedical-domain-security/)
+- [Airsmedical Trust Center](https://apis.io/security/airsmedical/airsmedical-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Airsmedical Plans Pricing](https://apis.io/plans/airsmedical/airsmedical-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Airsmedical Rate Limits](https://apis.io/rate-limits/airsmedical/airsmedical-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://airsmed.com)
+- [Support](https://airsmed.com/support/)
+- [Changelog](https://airsmed.com/releasenote/swiftmr/)
+- [Blog](https://airsmed.com/blog/)
+- [Compliance](https://airsmed.com/compliance/)
+- [Terms of service](https://airsmed.com/terms-and-conditions/)
+- [Privacy policy](https://airsmed.com/privacy-policy/)
+- [GitHub](https://github.com/airsmedical)
+
+## API Evangelist rating
+
+**Kin Score 23.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 36.8 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 38.2** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/airsmedical/](https://apis.io/providers/airsmedical/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AIRS Medical: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/airsmedical/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
